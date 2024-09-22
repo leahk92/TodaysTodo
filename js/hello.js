@@ -7,22 +7,22 @@ const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
 function showMainVisual(username) {
-    welcomeUser.innerText = `Welcome ${username}!`
-    mainVisual.classList.remove(HIDDEN_CLASSNAME);
+  welcomeUser.innerText = `Welcome ${username}!`;
+  mainVisual.classList.remove(HIDDEN_CLASSNAME);
 }
 
-function submitUsername(event){
-    event.preventDefault();
-    helloForm.classList.add(HIDDEN_CLASSNAME);
-    const username = helloInput.value;
-    localStorage.setItem(USERNAME_KEY, username);
-    showMainVisual(username);
+function submitUsername(event) {
+  event.preventDefault();
+  helloForm.classList.add(HIDDEN_CLASSNAME);
+  const username = helloInput.value;
+  localStorage.setItem(USERNAME_KEY, username);
+  showMainVisual(username);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
-if(savedUsername === null){
-    helloForm.classList.remove(HIDDEN_CLASSNAME);
-    helloForm.addEventListener("submit", submitUsername);
-} else{
-    showMainVisual(savedUsername);
+if (savedUsername === null) {
+  helloForm.classList.remove(HIDDEN_CLASSNAME);
+  helloForm.addEventListener("submit", submitUsername);
+} else {
+  showMainVisual(savedUsername);
 }
