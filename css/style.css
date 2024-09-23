@@ -24,7 +24,7 @@ body {
   height: 100%;
 }
 body {
-  background-image: url("../img/cat2.jpg");
+  background-image: url("../img/mountain.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -189,8 +189,8 @@ body {
 /* 명언 */
 #quote {
   flex-grow: 0.5;
-  text-align: center;
   opacity: 0.6;
+  text-align: center;
   font-size: 1.2em;
   font-style: italic;
 }
